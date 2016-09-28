@@ -1,13 +1,29 @@
-var express = require('express');
+var express = require('express'); //importing packages to create server
 var morgan = require('morgan');
 var path = require('path');
 
-var app = express();
+var app = express();               //creating an object
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+app.get('/article-one',function (req,res){
+    res.send("Article 1 has been requested and it will be served here");//adding new urls 
+});
+
+
+app.get('/article-three',function (req,res){
+    res.send("Article 3 has been requested and it will be served here");
+});
+
+
+app.get('/article-two',function (req,res){
+    res.send("Article 2 has been requested and it will be served here");
+});
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

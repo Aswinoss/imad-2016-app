@@ -7,7 +7,8 @@ app.use(morgan('combined'));
 
 //js for reduced code
 
-var articleOne={
+var articles={
+ 'article-one':{
     
     title : 'Article-One | imad',
     heading:'Article One',
@@ -17,9 +18,9 @@ var articleOne={
                 Learn well and deploy your first webapp and always keep learning.<br>
             </p>`,
     date:'05-Sep-2016',
-};
+},
 
-var articleTwo={
+ 'article-two':{
     
     title: 'Article-Two | imad',
     heading:'Article Two',
@@ -27,9 +28,9 @@ var articleTwo={
                Hai this is article two and iam making a lot of progress.
             </p>`,
     date:'10-Sep-2016',
-};
+},
 
-var articleThree={
+'article-three':{
     
     title : 'Article-Three | imad',
     heading:'Article Three',
@@ -37,8 +38,8 @@ var articleThree={
                 great going guys you have completed major portion of this course and keep learning.
             </p>`,
     date:'15-Sep-2016',
+},
 };
-
 
 function createTemplate(data){
 var title=data.title;
@@ -92,8 +93,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-app.get('/:article',function (req,res){
-    res.send(createTemplate(article));
+app.get('/:articleName',function (req,res){
+    var articleName=req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 
 

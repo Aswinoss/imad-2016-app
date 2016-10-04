@@ -14,7 +14,7 @@ var articleOne={
     content:` <p>
                 hai this is article one and we are here to test whether this works.<br>
                 It is great to have you people here and we are going to learn HTML5 and CSS3.<br>
-                Learn well and deploy your first webapp and aalways keep learning.<br>
+                Learn well and deploy your first webapp and always keep learning.<br>
             </p>`,
     date:'05-Sep-2016',
 };
@@ -92,20 +92,20 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-app.get('/article-one',function (req,res){
-    res.send(createTemplate(articleOne));
+app.get('/:article',function (req,res){
+    res.send(createTemplate(article));
 });
 
 
-app.get('/article-two',function (req,res){
+/*app.get('/article-two',function (req,res){
     res.send(createTemplate(articleTwo));
-});
+});*/
 
 
 
-app.get('/article-three',function (req,res){
+/*app.get('/article-three',function (req,res){
     res.send(createTemplate(articleThree));
-});
+});*/
 
 
 

@@ -89,7 +89,7 @@ return htmlTemplate;
 
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(--dirname,'ui','/ui/index.html'));
+  res.sendFile(path.join(__dirname,'ui','/ui/index.html'));
 });
 
 app.get('/article-one',function (req,res){

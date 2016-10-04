@@ -1,7 +1,6 @@
 body {
-    font-family: arial;
-    background-color :white;
-    margin-top: 75px;
+    font-family:arial;
+    margin-top: 60px;
     color:black;
 }
 
@@ -27,7 +26,6 @@ body {
     max-width: 800px;
 font-family: Comic sans;
 margin: 0 auto;
-padding-top: 50px;
 padding-right: 20px;
 padding-left: 20px;
 color: green;

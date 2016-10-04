@@ -53,6 +53,8 @@ var htmlTemplate=`<!doctype html>
 <html>
 <head>
       <link href="/ui/style.css" rel="stylesheet" />
+      <script>
+      window.alert("welcome to ${title}");
     
   
     <title>

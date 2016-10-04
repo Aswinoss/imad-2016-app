@@ -1,2 +1,3 @@
 console.log('Loaded!');
-window.alert("welcome Aswinoss");
+var reply=window.prompt("welcome Aswinoss");
+window.alert("you said $reply" );

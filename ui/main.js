@@ -13,17 +13,17 @@ element.innerHTML=
 }
 
 var img=document.getElementById("anonymous");     
-var  marginRight=0;//trying to move image right gradually
+var  marginRight=0;                            //trying to move image right gradually
 function moveLeft()
 {
     
-    marginRight=marginRight+2;
-    marginRight=marginRight+'px';
+    marginRight=marginRight + 1;
+    marginRight=marginRight + 'px';
     img.style.marginRight=marginRight;
 }
 
 img.onclick=function()
 {
     var Interval=setInterval(moveLeft,50);
-}
+};
 

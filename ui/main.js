@@ -1,11 +1,11 @@
 console.log('the page is primed and ready to go!!!');
-var rep=window.prompt("welcome Aswinoss");
+var rep=window.prompt("Enter password");
 if(rep=="aswinokuruion1")
 {
-window.alert("Thanx");
+window.alert("Welcome Aswinos");
 var element=document.getElementById("mainText");
-element.innerHTML=`We are Legion<br />
-                   We dont Forget<br />
-                   We dont Forgive<br />
-                   Expect us!`;
+element.innerHTML=`<pre>We are Legion
+                        We dont Forget
+                        We dont Forgive
+                        Expect us!</pre>`;
 }

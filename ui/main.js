@@ -1,5 +1,5 @@
 console.log('the page is primed and ready to go!!!');
 var rep=window.prompt("welcome Aswinoss");
-window.alert("you replied ${rep}");
+window.alert("Thanx");
 var element=document.getElementById("mainText");
 element.innerHTML="New content created curiosity";

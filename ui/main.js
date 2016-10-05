@@ -12,10 +12,11 @@ element.innerHTML=
                     Expect us!!!`;
 }
 
-var img=document.getElementById("anonymous");                 //trying to move image right gradually
+var img=document.getElementById("anonymous");     
+var  marginRight=0;//trying to move image right gradually
 function moveLeft()
 {
-    var  marginRight=0;
+    
     marginRight=marginRight+2;
     marginRight=marginRight+'px';
     img.style.marginRight=marginRight;
@@ -23,6 +24,6 @@ function moveLeft()
 
 img.onclick=function()
 {
-    setInterval(moveLeft,50);
+    var Interval=setInterval(moveLeft,50);
 }
 

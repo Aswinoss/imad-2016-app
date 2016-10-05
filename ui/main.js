@@ -4,9 +4,12 @@ if(rep=="12345")
 {
 window.alert("Welcome Aswinos");
 var element=document.getElementById("mainText");
-element.innerHTML=`<pre><center>
+element.innerHTML=`<pre>
+                   <center>
                    We are Legion
                    We dont Forget
                    We dont Forgive
-                   Expect us!</center</pre>`;
+                   Expect us!
+                   </center
+                   </pre>`;
 }

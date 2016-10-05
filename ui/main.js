@@ -12,7 +12,7 @@ element.innerHTML=
                     Expect us!!!`;
 }
 
-var img=getElementById("anonymous");                 //trying to move image right gradually
+var img=document.getElementById("anonymous");                 //trying to move image right gradually
 function moveLeft()
 {
     var  marginRight=0;

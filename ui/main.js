@@ -19,11 +19,11 @@ function moveLeft()
     
     marginRight=marginRight + 1;
     marginRight=marginRight + 'px';
-    img.style.marginRight=marginRight;
+    img.style.marginRight = marginRight;
 }
 
 img.onclick=function()
 {
-    var interval=setInterval(moveLeft,50);
+    var interval=setInterval(moveLeft , 50);
 };
 

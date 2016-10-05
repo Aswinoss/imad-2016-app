@@ -19,7 +19,7 @@ function moveLeft()
     
     marginRight=marginRight + 1;
     marginRight=marginRight + 'px';
-    img.style.margin-right=marginRight;
+    img.style.marginRight=marginRight;
 }
 
 img.onclick=function()

@@ -11,3 +11,18 @@ element.innerHTML=
                     We don't Forgive<br />
                     Expect us!!!`;
 }
+
+var img=getElementById("anonymous");                 //trying to move image right gradually
+function moveLeft()
+{
+    var  marginRight=0;
+    marginRight=marginRight+2;
+    marginRight=marginRight+'px';
+    img.style.marginRight=marginRight;
+}
+
+img.onclick=function()
+{
+    setInterval(moveLeft,50);
+}
+

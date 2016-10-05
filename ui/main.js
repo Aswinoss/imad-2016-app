@@ -6,8 +6,8 @@ window.alert("Welcome Aswinos");
 var element=document.getElementById("mainText");
 element.innerHTML=
                  
-                   `We are Legion<br />
-                   We dont Forget<br />
-                   We dont Forgive<br />
-                   Expect us`;
+                   `We are a Legion<br />
+                    We don't Forget<br />
+                    We don't Forgive<br />
+                    Expect us!!!`;
 }

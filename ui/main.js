@@ -1,4 +1,37 @@
 console.log('the page is primed and ready to go!!!');
+
+var button=document.getElementById("counter");
+var span=document.getElementById("count");
+button.onclick=function(){
+    //create new request object
+    
+    var request=new XmlHttpRequest();
+    
+    //capturing response and updating html
+    
+    request.onreadystatechange = function(){
+        if(readystatechange==XmlHttpRequest.DONE && request.status==200)
+        {
+            var counter=request.resposeText;
+            span.innerHtml=(counter.toString());
+            
+        }
+    };
+    
+    //sending request
+    request.open('GET','https://aswinoss.imad.hasura-app.io',true);
+    request.send(null);
+    
+    
+    
+};
+
+
+
+
+
+
+
 /*var rep=window.prompt("Enter password");
 if(rep=="12345")
 {
@@ -28,3 +61,6 @@ img.onclick=function()
     var interval=setInterval(moveLeft,50);
 };
 */
+
+
+

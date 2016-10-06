@@ -13,18 +13,18 @@ element.innerHTML=
 }
 
 var img=document.getElementById("anonymous");                            //trying to move image right gradually
-/*function moveLeft()
+marginRight='0';
+function moveLeft()
 {
     
     marginRight=marginRight + 1;
     marginRight=marginRight + 'px';
     img.style.marginRight = marginRight;
-}*/
+}
 
 img.onclick=function()
 {
-    //var interval=setInterval(moveLeft , 50);
-    img.style.marginRight = '100px';
-    img.style.paddingTop='50px';
+    
+    setInterval(moveLeft,50);
 };
 

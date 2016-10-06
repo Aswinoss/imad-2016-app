@@ -12,18 +12,18 @@ element.innerHTML=
                     Expect us!!!`;
 }
 
-var img=document.getElementById("anonymous");     
-var  marginRight=0;                            //trying to move image right gradually
-function moveLeft()
+var img=document.getElementById("anonymous");                            //trying to move image right gradually
+/*function moveLeft()
 {
     
     marginRight=marginRight + 1;
     marginRight=marginRight + 'px';
     img.style.marginRight = marginRight;
-}
+}*/
 
 img.onclick=function()
 {
-    var interval=setInterval(moveLeft , 50);
+    //var interval=setInterval(moveLeft , 50);
+    img.style.marginRight = '100px';
 };
 

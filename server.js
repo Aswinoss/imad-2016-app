@@ -97,11 +97,13 @@ app.get('/', function (req, res) {
 });
 
 var counter=0;
+
 app.get('/counter',function(req,res)
 {
     counter =counter+1;
-    res.send(counter.toString());
+    res.send(counter.toString());                                   //sending in string format as send func can send only strings
 });
+
 app.get('/:articleName',function (req,res){
     var articleName=req.params.articleName;                        //facility provided by express framework
     res.send(createTemplate(articles[articleName]));

@@ -1,5 +1,5 @@
 console.log('the page is primed and ready to go!!!');
-var rep=window.prompt("Enter password");
+/*var rep=window.prompt("Enter password");
 if(rep=="12345")
 {
 window.alert("Welcome Aswinos");
@@ -27,4 +27,4 @@ img.onclick=function()
     
     var interval=setInterval(moveLeft,50);
 };
-
+*/

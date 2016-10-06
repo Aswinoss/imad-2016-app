@@ -17,9 +17,9 @@ marginRight='0';
 function moveLeft()
 {
     
-    marginRight=marginRight + 1;
-    marginRight=marginRight + 'px';
-    img.style.marginRight = marginRight;
+    marginRight = marginRight + 1;
+    img.style.marginRight = marginRight + 'px';
+    
 }
 
 img.onclick=function()

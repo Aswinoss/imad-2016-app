@@ -1,7 +1,6 @@
 console.log('the page is primed and ready to go!!!');
 
 var button=document.getElementById("counter");
-var span=document.getElementById("count");
 button.onclick=function(){
     //create new request object
     
@@ -13,7 +12,8 @@ button.onclick=function(){
         if(readystatechange==XmlHttpRequest.DONE && request.status==200)
         {
             var counter=request.resposeText;
-            span.innerHtml=(counter.toString());
+            var span=document.getElementById("count");
+            span.innerHtml = counter.toString();
             
         }
     };

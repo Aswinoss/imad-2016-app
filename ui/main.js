@@ -17,7 +17,7 @@ marginRight='0';
 function moveLeft()
 {
     
-    marginRight = marginRight + 1;
+    marginRight = marginRight + 5;
     img.style.marginRight = marginRight + 'px';
     
 }

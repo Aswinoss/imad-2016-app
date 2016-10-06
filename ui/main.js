@@ -19,7 +19,7 @@ button.onclick=function(){
     };
     
     //sending request
-    request.open('GET','https://aswinoss.imad.hasura-app.io',true);
+    request.open('GET','https://aswinoss.imad.hasura-app.io/counter',true);
     request.send(null);
     
     

@@ -25,5 +25,6 @@ img.onclick=function()
 {
     //var interval=setInterval(moveLeft , 50);
     img.style.marginRight = '100px';
+    img.style.paddingTop='50px';
 };
 

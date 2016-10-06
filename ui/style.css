@@ -5,6 +5,9 @@ body {
     background-color:black;
 }
 
+hr{
+    color:green;
+}
 .center {
     text-align: center;
 }

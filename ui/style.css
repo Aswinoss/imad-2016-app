@@ -20,6 +20,11 @@ hr{
     font-weight: bold;
 }
 
+.header{
+    margin-right:100px;
+    font-family: Comic sans;
+}
+
 .img-medium {
     height: 200px;
 }

@@ -2,7 +2,7 @@ console.log('the page is primed and ready to go!!!');
 
 var button=document.getElementById("counter");
 button.onclick=function(){
-    
+    var counter=o;
     //create new request object
     
     var request=new XMLHttpRequest();

@@ -13,9 +13,9 @@ button.onclick=function(){
         if(request.readyState===XMLHttpRequest.DONE){ 
         if(request.status===200)                              //to check if the request is done and it is successful one.
         {
-            var counter1=request.responseText;
-            var change=document.getElementById("call");
-            change.innerHTML =counter1.toString();
+            var counter=request.responseText;
+            var span=document.getElementById("call");
+            span.innerHTML =counter.toString();
             
         }
         }
@@ -24,6 +24,13 @@ button.onclick=function(){
     //sending request
     request.open('GET',"http://aswinoss.imad.hasura-app.io/counter",true);
     request.send(null);
+    
+};
+
+var query=document.getElementById("name").value;
+var submit=document.getElementById("submit_btn");
+submit.onclick=function(){
+    
     
 };
 

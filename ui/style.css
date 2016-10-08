@@ -21,8 +21,9 @@ hr{
 }
 
 .header{
-    margin-right:100px;
-    font-family: Comic sans;
+    margin-right:90px;
+    font-family: Comic-sans;
+    padding-bottom:10px;
 }
 
 .img-medium {

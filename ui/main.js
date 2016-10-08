@@ -1,18 +1,8 @@
 console.log('the page is primed and ready to go!!!');
 
 var button=document.getElementById("counter");
-var counter=0;
 button.onclick=function(){
-     counter=counter+1;
     
-    
-    var span=document.getElementById("count");
-    span.innerHTML=counter.toString();
-    
-    
-
-
-/*
     //create new request object
     
     var request=new XMLHttpRequest();
@@ -20,7 +10,7 @@ button.onclick=function(){
     //capturing response and updating html
     
     request.onreadystatechange = function(){
-        if(request.readystatechange==XMLHttpRequest.DONE && request.status==200)
+        if(request.readystate==XMLHttpRequest.DONE && request.status==200)    //to check if the request is done and it is successful one.
         {
             var counter=request.resposeText;
             var span=document.getElementById("count");
@@ -32,8 +22,6 @@ button.onclick=function(){
     //sending request
     request.open('GET','https://aswinoss.imad.hasura-app.io/counter',true);
     request.send(null);
-    
- */   
     
 };
 

@@ -2,7 +2,7 @@ console.log('the page is primed and ready to go!!!');
 
 var button=document.getElementById("counter");
 button.onclick=function(){
-    var counter=o;
+  
     //create new request object
     
     var request=new XMLHttpRequest();
@@ -10,10 +10,11 @@ button.onclick=function(){
     //capturing response and updating html
     
     request.onreadystatechange = function(){
+          var counter=0;
         if(request.readystate===XMLHttpRequest.DONE){ 
         if(request.status===200)                              //to check if the request is done and it is successful one.
         {
-            var counter=request.responseText;
+            counter=request.responseText;
             document.getElementById("calls").innerHTML =counter.toString();
             
         }

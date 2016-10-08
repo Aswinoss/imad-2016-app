@@ -1,7 +1,6 @@
 //console.log('the page is primed and ready to go!!!');
 
 var button=document.getElementById("counter");
-document.getElementById("name").innerHTML="hai";
 button.onclick=function(){
   
     //create new request object

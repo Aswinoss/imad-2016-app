@@ -24,7 +24,8 @@ hr{
     font-size:200%;
     margin: 0 auto;
     font-family: Consolas;
-    padding-bottom:10px;
+    padding-bottom:2px;
+    padding-top:2px;
 }
 
 .img-medium {

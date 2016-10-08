@@ -13,8 +13,9 @@ button.onclick=function(){
         if(request.readystate===XMLHttpRequest.DONE){ 
         if(request.status===200)                              //to check if the request is done and it is successful one.
         {
-            var counter=request.responseText;
-            document.getElementById("calls").innerHTML =counter.toString();
+            var counter1=request.responseText;
+            var change=document.getElementById("calls");
+            change.innerHTML =counter1.toString();
             
         }
         }

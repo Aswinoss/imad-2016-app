@@ -12,7 +12,7 @@ button.onclick=function(){
     request.onreadystatechange = function(){
         if(request.readystate==XMLHttpRequest.DONE && request.status==200)    //to check if the request is done and it is successful one.
         {
-            var counter=request.resposeText;
+            var counter=request.responseText;
             var span=document.getElementById("count");
             span.innerHtml = counter.toString();
             

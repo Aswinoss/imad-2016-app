@@ -1,4 +1,4 @@
-console.log('the page is primed and ready to go!!!');
+//console.log('the page is primed and ready to go!!!');
 
 var button=document.getElementById("counter");
 button.onclick=function(){
@@ -10,11 +10,10 @@ button.onclick=function(){
     //capturing response and updating html
     
     request.onreadystatechange = function(){
-          var counter=0;
         if(request.readystate===XMLHttpRequest.DONE){ 
         if(request.status===200)                              //to check if the request is done and it is successful one.
         {
-            counter=request.responseText;
+            var counter=request.responseText;
             document.getElementById("calls").innerHTML =counter.toString();
             
         }
@@ -22,7 +21,7 @@ button.onclick=function(){
     };
     
     //sending request
-    request.open('GET','http://aswinoss.imad.hasura-app.io/counter',true);
+    request.open('GET',"http://aswinoss.imad.hasura-app.io/counter",true);
     request.send(null);
     
 };

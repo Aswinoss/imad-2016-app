@@ -10,12 +10,11 @@ button.onclick=function(){
     //capturing response and updating html
     
     request.onreadystatechange = function(){
-        if(request.readystate===4){ 
+        if(request.readystate===XMLHttpRequest.DONE){ 
         if(request.status===200)                              //to check if the request is done and it is successful one.
         {
             var counter=request.responseText;
-            var span=document.getElementById("calls");
-            span.innerHTML =document.writeln(counter.toString());
+            document.getElementById("calls").innerHTML =counter.toString();
             
         }
         }

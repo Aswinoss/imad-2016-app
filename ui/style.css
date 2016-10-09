@@ -21,14 +21,14 @@ hr{
 }
 
 .header{
-    font-size:70%;
+    font-size:200%;
     margin: 0 auto;
     font-family: Consolas;
     padding-bottom:100px;
 }
 
 .img-medium {
-    height: 400px;
+    height: 150px;
 }
 
  .container

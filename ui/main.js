@@ -28,7 +28,9 @@ button.onclick=function(){
 };
 
 var query=document.getElementById("name").value;
+
 var submit=document.getElementById("submit_btn");
+
 submit.onclick=function(){
     var names=['name1','name2','name3'];
     var list=' ';

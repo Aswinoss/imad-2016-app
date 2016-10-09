@@ -1,4 +1,7 @@
-//console.log('the page is primed and ready to go!!!');
+console.log('the page is primed and ready to go!!!');
+
+
+//AJAX CALLS AND COUNTER
 
 var button=document.getElementById("counter");
 button.onclick=function(){
@@ -27,6 +30,10 @@ button.onclick=function(){
     
 };
 
+
+
+//DYNAMIC DATA SUBMISSION AND RESPONSE similar to search in gmail webpage
+
 var query=document.getElementById("name").value;
 
 var submit=document.getElementById("submit_btn");
@@ -40,12 +47,10 @@ submit.onclick=function(){
     var ul=document.getElementById("ul_list");
     ul.innerHTML=list;
     
-    
 };
 
 
-
-
+//Animation in our webpage
 
 
 /*var rep=window.prompt("Enter password");

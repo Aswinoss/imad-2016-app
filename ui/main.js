@@ -34,7 +34,7 @@ button.onclick=function(){
 
 //DYNAMIC DATA SUBMISSION AND RESPONSE similar to search in gmail webpage
 
-var query=document.getElementById("name").value;
+
 
 var submit=document.getElementById("submit_btn");
 
@@ -63,7 +63,7 @@ submit.onclick=function(){
         }
         }
     };
-    
+    var query=document.getElementById("name").value;
     //sending request
     request.open('GET',"http://aswinoss.imad.hasura-app.io/submit_name?name="+query,true);
     request.send(null);

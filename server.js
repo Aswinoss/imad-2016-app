@@ -113,7 +113,7 @@ app.get('/submit_name',function(req,res){  //url submit_name?name=xxxx
 var name=req.query.name;                //or   submit_name/:name and var name=req.params.name;
 
 names.push(name);
-res.send(JSON.stringify(names));
+res.send(JSON.stringify(names));          //stringify is a JSON func used to convert array into string
 
 });
 

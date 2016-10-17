@@ -104,6 +104,20 @@ app.get('/counter',function(req,res)
     res.send(counter.toString());                                   //sending in string format as send func can send only strings
 });
 
+
+//new link for displaying entered name or new url endpoint
+
+var names=[];
+app.get('/submit_name',function(req,res){  //url submit_name?name=xxxx
+
+var name=req.query.name;                //or   submit_name/:name and var name=req.params.name;
+
+names.push(name);
+res.send(JSON.stringify(names));
+
+});
+
+
 app.get('/:articleName',function (req,res){
     var articleName=req.params.articleName;                        //facility provided by express framework
     res.send(createTemplate(articles[articleName]));

@@ -111,7 +111,7 @@ app.get('/', function (req, res) {
 var pool=new Pool(config);                       //new connection works as soon as server starts not when req so globally declared
 app.get('/test-db',function(req,res){    
                                                            //db connectivity code
-pool.query('SELECT * FROM test',function(err,result){
+pool.query('SELECT * FROM article',function(err,result){
     if(err){
         res.status(500).send(err.toString());
     }

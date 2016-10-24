@@ -109,7 +109,7 @@ app.get('/', function (req, res) {
 });
 
 
-var pool=new Pool(config);                      //connect swhen server restarts so globally declared
+var pool=new Pool(config);                      //connects when server restarts so globally declared
 
 
 app.get('/database',function(req,res){    

@@ -1,6 +1,17 @@
 var express = require('express'); //importing packages to create server
 var morgan = require('morgan');
 var path = require('path');
+var Pool  =  require('pg').Pool;
+
+var config={                                     //db credentials
+    
+  user:'aswinoss',
+  database:'aswinoss',
+  host:'db.imad.hasura.app.io',
+  port:'5432',
+  password:process.emv.DB_PASSWORD,              //this environment variable allows you to connect wo pswd provided by hasura
+  
+  };
 
 var app = express();               //creating an object
 app.use(morgan('combined'));
@@ -94,6 +105,24 @@ return htmlTemplate;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui','index.html'));
+});
+
+var pool=new Pool(config);                       //new connection works as soon as server starts not when req so globally declared
+app.get('/test-db',function(req,res){    
+                                                           //db connectivity code
+pool.query('SELECT * FROM test',function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else{
+        res.send(JSON.stringify(result));
+    }    
+    
+});
+
+
+
+
 });
 
 var counter=0;

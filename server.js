@@ -108,8 +108,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-var pool=new Pool(config);                       //new connection works as soon as server starts not when req so globally declared
-app.get('/test-db',function(req,res){    
+
+var pool=new Pool(config);                      //connect swhen server restarts so globally declared
+
+
+app.get('/database',function(req,res){    
                                                            //db connectivity code
 pool.query('SELECT * FROM test',function(err,result){
     if(err){

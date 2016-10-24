@@ -1,9 +1,9 @@
 var express = require('express'); //importing packages to create server
 var morgan = require('morgan');
 var path = require('path');
-var Pool  =  require('pg').Pool;
+//var Pool  =  require('pg').Pool;
 
-var config={                                     //db credentials
+/*var config={                                     //db credentials
     
   user:'aswinoss',
   database:'aswinoss',
@@ -12,6 +12,7 @@ var config={                                     //db credentials
   password:process.emv.DB_PASSWORD,              //this environment variable allows you to connect wo pswd provided by hasura
   
   };
+*/
 
 var app = express();               //creating an object
 app.use(morgan('combined'));
@@ -107,7 +108,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-var pool=new Pool(config);                       //new connection works as soon as server starts not when req so globally declared
+/*var pool=new Pool(config);                       //new connection works as soon as server starts not when req so globally declared
 app.get('/test-db',function(req,res){    
                                                            //db connectivity code
 pool.query('SELECT * FROM test',function(err,result){
@@ -121,6 +122,7 @@ pool.query('SELECT * FROM test',function(err,result){
 });
 
 });
+*/
 
 var counter=0;
 

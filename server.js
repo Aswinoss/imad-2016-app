@@ -112,7 +112,7 @@ app.get('/', function (req, res) {
 var pool=new Pool(config);                      //connects when server restarts so globally declared
 
 
-app.get('/database',function(req,res){    
+app.get('/test-db',function(req,res){    
                                                            //db connectivity code
 pool.query('SELECT * FROM test',function(err,result){
     if(err){

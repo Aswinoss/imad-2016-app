@@ -120,9 +120,6 @@ pool.query('SELECT * FROM test',function(err,result){
     
 });
 
-
-
-
 });
 
 var counter=0;

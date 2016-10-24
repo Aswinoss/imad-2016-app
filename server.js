@@ -9,7 +9,7 @@ var config={                                     //db credentials
   database:'aswinoss',
   host:'imad.hasura-app.io',
   port:'5432',
-  password:'db-aswinoss-70963'         //this environment variable allows you to connect wo pswd provided by hasura
+  password:process.env.DB_PASSWORD         //this environment variable allows you to connect wo pswd provided by hasura
   
   };
 

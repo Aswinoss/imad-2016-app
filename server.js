@@ -89,7 +89,7 @@ var htmlTemplate=`<!doctype html>
      </div>
     
      <div>
-        <h6>${date}</h6>
+        <h6>${date.toDateString()}</h6>
      </div>
     
      <div>

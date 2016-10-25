@@ -120,7 +120,7 @@ pool.query('SELECT * FROM test',function(err,result){
         res.status(500).send(err.toString());
     }
     else{
-        res.send(JSON.stringify(result.rows));
+        res.send(JSON.stringify(result.rows));             //to properly display data in clear form
     }    
     
 });
@@ -150,9 +150,26 @@ res.send(JSON.stringify(names));          //stringify is a JSON func used to con
 });
 
 
-app.get('/:articleName',function (req,res){
-    var articleName=req.params.articleName;                        //facility provided by express framework
-    res.send(createTemplate(articles[articleName]));
+app.get('/article/:articleName',function (req,res){
+    
+    pool.query('SELECT * FROM article WHERE title=""+req.params.articleName+"',function(err,result){
+                                                                        //(req.params)facility provided by express framework
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            if(result.rows.length===0){
+                res.status(404).send('Article not found');
+            }
+            else{
+                 var articleData = result.rows[0];
+                 res.send(createTemplate(articelData);
+                
+            }
+        }
+    });
+                        
+   
 });
 
 app.get('/ui/style.css', function (req, res) {

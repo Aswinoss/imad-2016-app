@@ -1,3 +1,4 @@
+//articles are dynamic and ajax for counter api and names listing
 var express = require('express'); //importing packages to create server
 var morgan = require('morgan');
 var path = require('path');
@@ -19,39 +20,6 @@ app.use(morgan('combined'));
 
 //js for reduced code
 
-var articles={
- 'article-one':{
-    
-    title : 'Article-One | imad',
-    heading:'Article One',
-    content:` <p>
-                hai this is article one and we are here to test whether this works.<br>
-                It is great to have you people here and we are going to learn HTML5 and CSS3.<br>
-                Learn well and deploy your first webapp and always keep learning.<br>
-            </p>`,
-    date:'05-Sep-2016',
-},
-
- 'article-two':{
-    
-    title: 'Article-Two | imad',
-    heading:'Article Two',
-    content:` <p>
-               Hai this is article two and iam making a lot of progress.
-            </p>`,
-    date:'10-Sep-2016',
-},
-
-'article-three':{
-    
-    title : 'Article-Three | imad',
-    heading:'Article Three',
-    content:` <p>
-                great going guys you have completed major portion of this course and keep learning.
-            </p>`,
-    date:'15-Sep-2016',
-},
-};
 
 function createTemplate(data){
 var title=data.title;
@@ -89,7 +57,7 @@ var htmlTemplate=`<!doctype html>
      </div>
     
      <div>
-        <h6>${date.toDateString()}</h6>
+        <h6>${date.toDateString()}</h6>          //js function to converrt timeline into date as readable string
      </div>
     
      <div>
@@ -152,6 +120,7 @@ res.send(JSON.stringify(names));          //stringify is a JSON func used to con
 
 app.get('/article/:articleName',function (req,res){
     
+    //$1(library (must use)) is used to prevent user end and implement random queries in url
     pool.query("SELECT * FROM article WHERE title=$1",[req.params.articleName],function(err,result){
                                                                         //(req.params)facility provided by express framework
         if(err){
